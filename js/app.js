@@ -16,22 +16,22 @@ wrapper.onmousedown = function(e){
 			if(e.code == 'KeyS' && tar.classList.contains('active')){
 				console.log(z);
 				z+=5;
-				tar.style.transform =	"translateY(" + z + "px"
+				tar.style.transform =	"translate(" + w + "px, " + z + "px)"
 			 }
 			 if(e.code == 'KeyW' && tar.classList.contains('active')){
 				console.log(z);
 				z-=5;
-				tar.style.transform =	"translateY(" + z + "px"
+				tar.style.transform =	"translate(" + w + "px, " + z + "px)"
 			 }
 			 if(e.code == 'KeyD' && tar.classList.contains('active')){
 				console.log(w);
 				w+=5;
-				tar.style.transform =	"translateX(" + w + "px"
+				tar.style.transform =	"translate(" + w + "px, " + z + "px)"
 			 }
 			 if(e.code == 'KeyA' && tar.classList.contains('active')){
 				console.log(w);
 				w-=5;
-				tar.style.transform =	"translateX(" + w + "px"
+				tar.style.transform =	"translate(" + w + "px, " + z + "px)"
 			 }
 
 		})
