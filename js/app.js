@@ -1,16 +1,46 @@
 'use strict';
-
+let x, y, z, w;
+z=0;
+w=0;
 let wrapper = document.querySelector('.wrapper');
 
 wrapper.onmousedown = function(e){
 	let tar = (e.target);
+	x = getCoords(tar).left;
+	y = getCoords(tar).top;
+	tar.classList.toggle('active');
 	console.log(getCoords(tar));
-	tar.onmousemove = function(event){
-		let x = event.clientX - getCoords(tar).left;
-		let y = event.clientY - getCoords(tar).top;
-		console.log(x, y);
-	tar.style.transform = "translate(" + x + "px, " + y + "px)"}
+
+		document.addEventListener('keypress', function(e){
+			e.preventDefault();
+			if(e.code == 'KeyS' && tar.classList.contains('active')){
+				console.log(z);
+				z+=5;
+				tar.style.transform =	"translateY(" + z + "px"
+			 }
+			 if(e.code == 'KeyW' && tar.classList.contains('active')){
+				console.log(z);
+				z-=5;
+				tar.style.transform =	"translateY(" + z + "px"
+			 }
+			 if(e.code == 'KeyD' && tar.classList.contains('active')){
+				console.log(w);
+				w+=5;
+				tar.style.transform =	"translateX(" + w + "px"
+			 }
+			 if(e.code == 'KeyA' && tar.classList.contains('active')){
+				console.log(w);
+				w-=5;
+				tar.style.transform =	"translateX(" + w + "px"
+			 }
+
+		})
+
+	
 }
+
+
+
 
 function getCoords(elem) {
   let box = elem.getBoundingClientRect();

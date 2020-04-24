@@ -121,3 +121,6 @@ main {
 .logo img{
 	width: 40px;
 }
+.active{
+	border: 2px solid red;
+}
