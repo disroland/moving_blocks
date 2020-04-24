@@ -1,0 +1,1 @@
+Test page, where we can move some objects using mouse or keys.
